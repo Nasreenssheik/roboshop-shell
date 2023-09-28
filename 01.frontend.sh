@@ -1,14 +1,14 @@
 echo -e "\e[31m Install nginx\e[0m"
-yum install nginx -y
+yum install nginx -y &>>/tmp/roboshop.log
 echo -e "\e[31m Nginx server installed successfully\e[0m"
  systemctl start nginx
- systemctl enable nginx
+ systemctl enable nginx &>>/tmp/roboshop.log
  echo -e "\e[31m Nginx server started and enabled successfully\e[0m"
  cd /usr/share/nginx/html
- rm -rf *
+ rm -rf * &>>/tmp/roboshop.log
  echo -e "\e[31m Default server content removed\e[0m"
  curl -O https://roboshop-artifacts.s3.amazonaws.com/frontend.zip
- unzip frontend.zip
+ unzip frontend.zip &>>/tmp/roboshop.log
  rm -rf frontend.zip
- systemctl restart nginx
+ systemctl restart nginx &>>/tmp/roboshop.log
  echo -e "\e[31m Nginx server restarted successfully\e[0m"
