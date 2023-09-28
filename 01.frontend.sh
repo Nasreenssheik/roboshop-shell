@@ -9,6 +9,7 @@ echo -e "\e[31m Nginx server installed successfully\e[0m"
  echo -e "\e[31m Default server content removed\e[0m"
  curl -O https://roboshop-artifacts.s3.amazonaws.com/frontend.zip &>>/tmp/roboshop.log
  unzip frontend.zip &>>/tmp/roboshop.log
+ echo -e "\e[31m New server content is added\e[0m"
  rm -rf frontend.zip
  systemctl restart nginx &>>/tmp/roboshop.log
  echo -e "\e[31m Nginx server restarted successfully\e[0m"
