@@ -5,6 +5,6 @@ yum install mongodb-org -y
 echo -e "\e[32m mongodb installed successfully \e[0m"
 sed -i -e 's/127.0.0.1/0.0.0.0/' /etc/mongod.conf
 echo -e "\e[32m mongodb listen address changed successfully \e[0m"
-systemctl start mongod
+systemctl restart mongod
 systemctl enable mongod
 echo -e "\e[32m mongodb enabled and started successfully \e[0m"
