@@ -7,7 +7,7 @@ echo -e "\e[32m useradded successfully \e[0m"
 mkdir /app
 cd /app
 echo -e "\e[32m Directory changed successfully \e[0m"
-curl -0 https://roboshop-artifacts.s3.amazonaws.com/catalogue.zip
+curl -O https://roboshop-artifacts.s3.amazonaws.com/catalogue.zip
 unzip catalogue.zip
 echo -e "\e[31m New server content is added\e[0m"
 rm -rf catalogue.zip
