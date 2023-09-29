@@ -1,4 +1,4 @@
-curl -sL https://rpm.nodesource.com/setup_lts.x | bash  &>>/tmp/roboshop.log
+curl -sL https://rpm.nodesource.com/setup_lts.x | bash
 echo -e "\e[32m Repo file downloaded successfully\e[0m"
 yum install nodejs -y  &>>/tmp/roboshop.log
 echo -e "\e[32m Nodejs installed successfully \e[0m"
