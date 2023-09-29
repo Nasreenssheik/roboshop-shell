@@ -15,4 +15,4 @@ echo -e "\e[31m Nginx server installed successfully\e[0m"
  echo -e "\e[31m Nginx server restarted successfully\e[0m"
  cp /root/roboshop-shell/roboshop.conf /etc/nginx/default.d/roboshop.conf
  echo -e "\e[32m Nginx configuraion file updated successfully \e[0m"
- systemctl restart catalogue
+ systemctl restart nginx
