@@ -14,11 +14,17 @@ rm -rf catalogue.zip
 npm install  &>>/tmp/roboshop.log
 echo -e "\e[31m Nodejs Dependencies installed successfully\e[0m"
 cp /root/roboshop-shell/catalogue.service /etc/systemd/system/catalogue.service
+echo -e "\e[31m catalogue service file created successfully\e[0m"
 systemctl daemon-reload
 systemctl enable catalogue
 systemctl restart catalogue
+echo -e "\e[31m catalogue enabled and restarted successfully\e[0m"
 cp /root/roboshop-shell/mongodb.repo /etc/yum.repos.d/mongo.repo
+echo -e "\e[31m repo file downloaded successfully\e[0m"
 yum install mongodb-org-shell -y
-mongo --host MONGODB-SERVER-IPADDRESS </app/schema/catalogue.js
+echo -e "\e[32m mongodb installed successfully \e[0m"
+mongo --host mongodb-dev.nasreen.cloud </app/schema/catalogue.js
+echo -e "\e[32m mongodb schema loaded successfully \e[0m"
 cp /root/roboshop-shell/roboshop.conf /etc/nginx/default.d/roboshop.conf
+echo -e "\e[32m Nginx configuraion file updated successfully \e[0m"
 systemctl restart catalogue

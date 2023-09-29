@@ -8,3 +8,4 @@ echo -e "\e[32m mongodb listen address changed successfully \e[0m"
 systemctl restart mongod
 systemctl enable mongod  &>>/tmp/roboshop.log
 echo -e "\e[32m mongodb enabled and started successfully \e[0m"
+
