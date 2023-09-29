@@ -13,15 +13,15 @@ echo -e "\e[31m New server content is added\e[0m"
 rm -rf catalogue.zip
 npm install  &>>/tmp/roboshop.log
 echo -e "\e[31m Nodejs Dependencies installed successfully\e[0m"
-cp /root/roboshop-shell/catalogue.service /etc/systemd/system/catalogue.service
+cp /root/roboshop-shell/catalogue.service /etc/systemd/system/catalogue.service &>>/tmp/roboshop.log
 echo -e "\e[31m catalogue service file created successfully\e[0m"
 systemctl daemon-reload
-systemctl enable catalogue
-systemctl restart catalogue
+systemctl enable catalogue &>>/tmp/roboshop.log
+systemctl restart catalogue &>>/tmp/roboshop.log
 echo -e "\e[31m catalogue enabled and restarted successfully\e[0m"
-cp /root/roboshop-shell/mongodb.repo /etc/yum.repos.d/mongo.repo
+cp /root/roboshop-shell/mongodb.repo /etc/yum.repos.d/mongo.repo &>>/tmp/roboshop.log
 echo -e "\e[31m repo file downloaded successfully\e[0m"
-yum install mongodb-org-shell -y
+yum install mongodb-org-shell -y &>>/tmp/roboshop.log
 echo -e "\e[32m mongodb installed successfully \e[0m"
 mongo --host mongodb-dev.nasreen.cloud </app/schema/catalogue.js
 echo -e "\e[32m mongodb schema loaded successfully \e[0m"
