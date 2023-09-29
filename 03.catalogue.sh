@@ -25,6 +25,4 @@ yum install mongodb-org-shell -y
 echo -e "\e[32m mongodb installed successfully \e[0m"
 mongo --host mongodb-dev.nasreen.cloud </app/schema/catalogue.js
 echo -e "\e[32m mongodb schema loaded successfully \e[0m"
-cp /root/roboshop-shell/roboshop.conf /etc/nginx/default.d/roboshop.conf
-echo -e "\e[32m Nginx configuraion file updated successfully \e[0m"
 systemctl restart catalogue
