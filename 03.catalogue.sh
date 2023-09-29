@@ -13,4 +13,11 @@ echo -e "\e[31m New server content is added\e[0m"
 rm -rf catalogue.zip
 npm install  &>>/tmp/roboshop.log
 echo -e "\e[31m Nodejs Dependencies installed successfully\e[0m"
+cp /root/roboshop-shell/catalogue.service /etc/systemd/system/catalogue.service
+systemctl daemon-reload
+systemctl enable catalogue
+systemctl restart catalogue
+cp /root/roboshop-shell/mongodb.repo /etc/yum.repos.d/mongo.repo
+yum install mongodb-org-shell -y
+mongo --host MONGODB-SERVER-IPADDRESS </app/schema/catalogue.js
 
