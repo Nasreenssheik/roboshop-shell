@@ -20,4 +20,5 @@ systemctl restart catalogue
 cp /root/roboshop-shell/mongodb.repo /etc/yum.repos.d/mongo.repo
 yum install mongodb-org-shell -y
 mongo --host MONGODB-SERVER-IPADDRESS </app/schema/catalogue.js
-
+cp /root/roboshop-shell/roboshop.conf /etc/nginx/default.d/roboshop.conf
+systemctl restart catalogue

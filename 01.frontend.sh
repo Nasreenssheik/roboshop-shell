@@ -13,3 +13,4 @@ echo -e "\e[31m Nginx server installed successfully\e[0m"
  rm -rf frontend.zip
  systemctl restart nginx &>>/tmp/roboshop.log
  echo -e "\e[31m Nginx server restarted successfully\e[0m"
+ systemctl restart nginx
